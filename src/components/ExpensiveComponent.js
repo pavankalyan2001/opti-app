@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 const ExpensiveComponent = ({ count }) => {
     console.log("ExpensiveComponent re-rendered");
 
-    // Simulating heavy computation
+    //useMemo result of function unless count changes
     const computeExpensiveValue = useMemo(() => {
       console.log("Computing...");
       let sum = 0;
@@ -16,4 +16,5 @@ const ExpensiveComponent = ({ count }) => {
     return <div>Computed Value: {computeExpensiveValue}</div>;
 };
 
+//memorizes component
 export default React.memo(ExpensiveComponent);

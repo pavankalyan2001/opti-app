@@ -6,6 +6,7 @@ import ExpensiveComponent from "./components/ExpensiveComponent";
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
+  //caches function
   const increment = useCallback(() => {
     setCount(prev => (prev + 1));
   }, []);
